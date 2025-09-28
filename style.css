@@ -12,29 +12,45 @@ body {
   color: #fff;
 }
 
-.filters {
+.head {
   display: flex;
-  gap: 10px;
+  gap: 5px;
   padding: 20px;
-  
+  align-items: center;
 }
 
 .filterBar {
   color: #fff;
-  background-color: #363940;
+  background-color: #555;
   width: 20%;
+  border: none;
+  border: 1px solid #000;
+  border-radius: 2px;
+}
+
+#logo {
+  margin-left: auto;
+}
+
+#logo img {
+  width: auto;
+  height: 40px;
+  display: block;
+  margin-left: auto;
+  min-width: 80px;
+  max-width: 150px;
+  object-fit: contain;
 }
 
 #getBtn {
-  margin: 0 20px;
-  padding: 10px 20px;
+  margin: 5px;
   color: #fff;
   background-color: #363940;
-}
-
-#getBtn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+  text-align: center;
+  height: 1.5lh;
+  border: none;
+  border: 1px solid #000;
+  border-radius: 2px;
 }
 
 .cardsGrid {
@@ -42,14 +58,14 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   padding: 20px;
-  min-height: 100vh;
+  min-height: 20vh;
 }
 
 .card {
   background-color: #363940;
   border: 1px solid #000;
-  border-radius: 8px;
-  padding: 10px;
+  border-radius: 5px;
+  padding: 5px;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -58,14 +74,12 @@ body {
 
 .img img {
   background: #555;
-  color: #fff;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 4px;
-  text-align: center;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* обрезает лишнее, не растягивает */
+  object-fit: cover;
   display: block;
 }
 
@@ -83,16 +97,4 @@ body {
   font-size: 0.9rem;
   color: #aaa;
   margin: 0;
-}
-
-@media (max-width: 250px) {
-  .filters {
-    flex-direction: column;
-  }
-
-  .cardsGrid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    padding: 15px;
-  }
 }

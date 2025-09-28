@@ -14,5 +14,3 @@ export const api = axios.create({
     "x-rapidapi-host": "gamerpower.p.rapidapi.com",
   },
 });
-
-
