@@ -1,37 +1,35 @@
-import * as api from "./api-info.js"
+import { api } from "./api-info.js";
 
-// const api = axios.create({
-//   baseURL: "https://gamerpower.com/api",
-//   params: { id: "525" },
-//   headers: {
-//     "x-rapidapi-host": "gamerpower.p.rapidapi.com",
-//   },
-// });
+const giveaways = "/giveaways";
+const platform = [
+  "pc",
+  "steam",
+  "epic-games-store",
+  "ubisoft",
+  "gog",
+  "itchio",
+  "ps4",
+  "ps5",
+  "xbox-one",
+  "xbox-series-xs",
+  "switch",
+  "android",
+  "ios",
+  "vr",
+  "battlenet",
+  "origin",
+  "drm-free",
+  "xbox-360",
+];
+const type = ["game", "loot", "beta"];
+const sort = ["date", "value", "popularity"];
 
-const options = {
-  method: "GET",
-  url: 'https://gamerpower.p.rapidapi.com/api/filter',
-  params: {
-    platform: 'epic-games-store.steam.android',
-    type: 'game.loot'
-  },
-  headers: {
-    'x-rapidapi-key': '0bc5984a5emsh30a85dda347cc22p172484jsn7cbf808e14cd',
-    'x-rapidapi-host': 'gamerpower.p.rapidapi.com'
-  }
-};
-
-
-
-async function getInfo() {
+export async function getInfo() {
   try {
-    const response = await api.request(options);
-    console.log(response.data);
+    const response = await api.get(giveaways, {params: {}});
+    const result = response.data;
+    console.log(result);
   } catch (error) {
     console.error(error);
   }
 }
-
-
-
-
