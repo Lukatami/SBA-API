@@ -62,17 +62,19 @@ async function renderPage() {
   });
 }
 
-
-
+// Add click eventListener to getBtn
 getBtn.addEventListener("click", userRequest);
 
+// Event handler for getBTn
 async function userRequest() {
+  // Gather filter values
   const filters = {
     platform: platformFilter.value,
     type: typeFilter.value,
     sort: sortFilter.value,
   };
-
+  // Call getData function and provide applied filters values
   const response = await getData(filters);
   console.log(response);
 }
+
