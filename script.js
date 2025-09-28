@@ -15,7 +15,7 @@ export async function getData({ platform, type, sort }) {
     // Exclude empty or default filters values from request params
     if (platform && platform !== "default") params.platform = platform;
     if (type && type !== "default") params.type = type;
-    if (sort && sort !== "default") params.sort = sort;
+    if (sort && sort !== "default") params["sort-by"] = sort;
 
     // Getting response with applied params
     const response = await api.get(giveaways, { params });

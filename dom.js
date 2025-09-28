@@ -34,11 +34,11 @@ const type = ["game", "loot", "beta"];
 // Array of sort options
 const sort = ["date", "value", "popularity"];
 
-// Run renderPage function
-renderPage();
+// Run renderFilters function
+renderFilters();
 
 // Dynamic rendering webpage
-async function renderPage() {
+async function renderFilters() {
   // Creating platformFilter options
   platform.forEach((e) => {
     const option = document.createElement("option");
@@ -73,6 +73,7 @@ async function userRequest() {
     type: typeFilter.value,
     sort: sortFilter.value,
   };
+  console.log(filters);
   // Call getData function and provide applied filters values
   const response = await getData(filters);
   return response;
