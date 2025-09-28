@@ -11,41 +11,20 @@
   </head>
   <body>
     <div class="filters">
-      <select id="platform">
+      <select class="filterBar" id="platform">
         <option value="default">Platform</option>
       </select>
-      <select id="type">
+      <select class="filterBar" id="type">
         <option value="default">Type</option>
       </select>
-      <select id="sort">
+      <select class="filterBar" id="sort">
         <option value="default">Sort By</option>
       </select>
+      <button id="getBtn">Get Info!</button>
     </div>
-    <button id="getBtn">Get Info!</button>
-    <div class="cardsGrid">
-      <div class="card">
-        <div class="img">Picture</div>
-        <div class="cardInfo">content</div>
-      </div>
-      <div class="card">
-        <div class="img">Picture</div>
-        <div class="cardInfo">content</div>
-      </div>
-      <div class="card">
-        <div class="img">Picture</div>
-        <div class="cardInfo">content</div>
-      </div>
-      <div class="card">
-        <div class="img">Picture</div>
-        <div class="cardInfo">content</div>
-      </div>
-      <div class="card">
-        <div class="img">Picture</div>
-        <div class="cardInfo">content</div>
-      </div>
-      
-    </div>
-    
+
+    <div class="cardsGrid"></div>
+
     <script type="module" src="./dom.js"></script>
   </body>
 </html>
