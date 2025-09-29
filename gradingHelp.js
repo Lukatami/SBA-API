@@ -1,6 +1,8 @@
+// ✅   Checked all paths to files using "./.."
+
 // ❓   Use the fetch API or Axios to communicate with an external web API.
 //      Use the data provided by this API to populate your application’s content and features.
-// ✅   Check api-info.js, getData() from script.js 
+// ✅   Check api-info.js, getData() from script.js
 
 // ❓   Create user interaction with the API through a search feature, paginated gallery, or similar.
 //      This feature should use GET requests to retrieve associated data.
@@ -11,7 +13,7 @@
 // ✅❓ Voided by teachers
 
 // ❓   Make use of Promises and async/await syntax as appropriate.
-// ✅   Check userRequest() and renderCards() from dom.js and getData() from script.js 
+// ✅   Check userRequest() and renderCards() from dom.js and getData() from script.js
 
 // ❓   Organize your JavaScript code into at least three (3) different module files,
 //      and import functions and data across files as necessary.
