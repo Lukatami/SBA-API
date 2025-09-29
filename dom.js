@@ -73,7 +73,6 @@ async function userRequest() {
     type: typeFilter.value,
     sort: sortFilter.value,
   };
-  console.log(filters);
   // Call getData function and provide applied filters values
   const response = await getData(filters);
   return response;
